@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="JdrApp.Views.JungleAccueil"
+             BackgroundImageSource="RuinesJungles">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Affrontons les dangers de la jungle !"
+                   Margin="20,35,20,20"
+                   TextTransform="Uppercase"
+                   FontSize="Large"
+                   VerticalOptions="StartAndExpand"
+                   TextColor="White"
+                   HorizontalTextAlignment="Center"
+                   HorizontalOptions="CenterAndExpand"
+                   FontFamily="PhiloBI"/>
+            <Label Text="Incarnez un valeureux héros en quête de vengeance et déjouez les complots qui se trament au plus profond de la jungle ! "
+                   TextColor="White"
+                   Margin="20"
+                   FontSize="Medium"
+                   FontFamily="PhiloBI"
+                   VerticalOptions="StartAndExpand"
+                   HorizontalOptions="CenterAndExpand"
+                   HorizontalTextAlignment="Center"/>
+            <Button Text="Débuter"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand"
+                    BackgroundColor="Transparent"
+                    Clicked="GoJungleAventure01Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

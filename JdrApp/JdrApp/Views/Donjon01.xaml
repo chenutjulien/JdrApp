@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="JdrApp.Views.Donjon01">
+    <ContentPage.Content>
+        <ScrollView Margin="5">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.5*"/>
+                    <ColumnDefinition Width="0.5*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+                <StackLayout Grid.Column="0" Grid.Row="0"> <!-- Fiche du joueur coté gauche -->
+                    <Label Text="PV: 0"
+                           x:Name="StatutPv"
+                           VerticalOptions="Start" 
+                           HorizontalOptions="Start"
+                           FontAttributes="Bold"
+                           TextColor="AntiqueWhite"
+                           FontSize="15"
+                           FontFamily="PhiloBI"/>
+                    <Label Text="Attaque: 0-0"
+                           x:Name="StatutAttaque"
+                           VerticalOptions="Start" 
+                           HorizontalOptions="Start"
+                           FontAttributes="Bold"
+                           TextColor="AntiqueWhite"
+                           FontSize="15"
+                           FontFamily="PhiloBI"/>
+                    <Label Text="Expérience"
+                           x:Name="StatutExperience"
+                           VerticalOptions="Start" 
+                           HorizontalOptions="Start"
+                           FontAttributes="Bold"
+                           TextColor="AntiqueWhite"
+                           FontSize="15"
+                           FontFamily="PhiloBI"/>
+                    <Label Text="Or: 0"
+                           x:Name="StatutOr"
+                           VerticalOptions="Start" 
+                           HorizontalOptions="Start"
+                           FontAttributes="Bold"
+                           TextColor="AntiqueWhite"
+                           FontSize="15"
+                           FontFamily="PhiloBI"/>
+                </StackLayout>
+                <StackLayout Grid.Column="1" Grid.Row="0" Margin="5"> <!-- Fiche du joueur coté droit -->
+                    <Label Text="Potions standards: 0"
+                           x:Name="StatutPopo"
+                           VerticalOptions="Start" 
+                           HorizontalOptions="Start"
+                           FontAttributes="Bold"
+                           TextColor="AntiqueWhite"
+                           FontSize="15"
+                           FontFamily="PhiloBI"/>
+                    <Label Text="Potions miraculeuses: 0"
+                           x:Name="StatutPopoMiracle"
+                           VerticalOptions="Start" 
+                           HorizontalOptions="Start"
+                           FontAttributes="Bold"
+                           TextColor="AntiqueWhite"
+                           FontSize="15"
+                           FontFamily="PhiloBI"/>
+                    <Label Text="Niveau : 0"
+                           x:Name="StatutNiveau"
+                           VerticalOptions="Start" 
+                           HorizontalOptions="Start"
+                           FontAttributes="Bold"
+                           TextColor="AntiqueWhite"
+                           FontSize="15"
+                           FontFamily="PhiloBI"/>
+                    <Label Text="Inventaire: "
+                           x:Name="StatutInventaire"
+                           VerticalOptions="Start" 
+                           HorizontalOptions="Start"
+                           FontAttributes="Bold"
+                           TextColor="AntiqueWhite"
+                           FontSize="15"
+                           FontFamily="PhiloBI"/>
+                </StackLayout>
+                <StackLayout Grid.Row="1" Grid.ColumnSpan="2" x:Name="BlocHistoire" IsVisible="false" Padding="10"> <!-- Bloc Histoire -->
+                    <Label Text=""
+                           x:Name="Histoire"
+                           VerticalOptions="CenterAndExpand" 
+                           HorizontalOptions="CenterAndExpand"
+                           HorizontalTextAlignment="Center"
+                           FontAttributes="Bold"
+                           TextColor="AntiqueWhite"
+                           FontSize="Medium"
+                           FontFamily="PhiloBI"/>
+                </StackLayout>
+                <StackLayout Grid.Row="1" Grid.ColumnSpan="2" x:Name="BlocTitreChoixAvatar" IsVisible="true"> <!-- Bloc Titre Choix Avatar -->
+                    <Label Text="Choississez votre avatar"
+                           x:Name="TitreChoixPerso"
+                           VerticalOptions="CenterAndExpand" 
+                           HorizontalOptions="CenterAndExpand"
+                           FontAttributes="Bold"
+                           TextColor="AntiqueWhite"
+                           FontSize="Medium"
+                           FontFamily="PhiloBI"/>
+                </StackLayout>
+                <StackLayout Grid.Column="0" Grid.Row="2" x:Name="BlocChoixAvatar" Padding="15" VerticalOptions="Fill"> <!-- Bloc Choix Avatar -->
+                    <RadioButton x:Name="Avatar01"
+                                 Value="Justicier"
+                                 Content="Justicier"
+                                 TextColor="AntiqueWhite"
+                                 FontSize="Medium"
+                                 FontFamily="PhiloR"
+                                 Padding="5"/>
+                    <RadioButton x:Name="Avatar02"
+                                 Value="Pretre"
+                                 Content="Prêtre"
+                                 TextColor="AntiqueWhite"
+                                 FontSize="Medium"
+                                 FontFamily="PhiloR"
+                                 Padding="5"/>
+                    <RadioButton x:Name="Avatar03"
+                                 Value="Archer"
+                                 Content="Archer"
+                                 TextColor="AntiqueWhite"
+                                 FontSize="Medium"
+                                 FontFamily="PhiloR"
+                                 Padding="5"/>
+                    <Label Text="Vous avez choisi"
+                           x:Name="ChoixAvatar"
+                           TextColor="AntiqueWhite"
+                           FontSize="Medium"
+                           FontFamily="PhiloR"
+                           Padding="10"/>
+                </StackLayout>
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

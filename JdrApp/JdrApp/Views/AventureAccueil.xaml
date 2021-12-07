@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="JdrApp.Views.AventureAccueil">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Label Text="Affrontons les dangers du Donjon !"
+                   Margin="20,35,20,20"
+                   TextTransform="Uppercase"
+                   FontSize="Large"
+                   VerticalOptions="StartAndExpand"
+                   TextColor="RosyBrown"
+                   HorizontalTextAlignment="Center"
+                   HorizontalOptions="CenterAndExpand"/>
+                <Label Text="Incarnez un puissant héros et partez à la conquete du Donjon, triomphez des pièges et des ennemis pour amasser des trésors."
+                   TextColor="RosyBrown"    
+                   Margin="20"
+                   VerticalOptions="StartAndExpand"
+                   HorizontalOptions="CenterAndExpand"
+                   HorizontalTextAlignment="Center"/>
+                <Button Text="Commencer l'aventure ?"
+                    x:Name="voirAventure"
+                    Margin="20,35,20,35"
+                    HorizontalOptions="CenterAndExpand"
+                    BackgroundColor="DarkSalmon"
+                    VerticalOptions="StartAndExpand"
+                    Clicked="DebutAventure"/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

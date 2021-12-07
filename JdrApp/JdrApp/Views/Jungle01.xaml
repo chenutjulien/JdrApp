@@ -1,0 +1,450 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="JdrApp.Views.Jungle01"
+             BackgroundImageSource="FondJungle03">
+    <ContentPage.Content>
+        <ScrollView Margin="5">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.5*"/>
+                    <ColumnDefinition Width="0.5*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="50"/>
+                </Grid.RowDefinitions>
+                <StackLayout Grid.Column="0" Grid.Row="0"> <!-- Fiche du joueur coté gauche -->
+                    <Label Text="PV: 0"
+                           x:Name="StatutPv"
+                           VerticalOptions="Start" 
+                           HorizontalOptions="Start"
+                           FontAttributes="Bold"
+                           TextColor="PowderBlue"
+                           FontSize="15"
+                           FontFamily="PhiloBI"/>
+                    <Label Text="Attaque: 0-0"
+                           x:Name="StatutAttaque"
+                           VerticalOptions="Start" 
+                           HorizontalOptions="Start"
+                           FontAttributes="Bold"
+                           TextColor="PowderBlue"
+                           FontSize="15"
+                           FontFamily="PhiloBI"/>
+                    <Label Text="Expérience"
+                           x:Name="StatutExperience"
+                           VerticalOptions="Start" 
+                           HorizontalOptions="Start"
+                           FontAttributes="Bold"
+                           TextColor="PowderBlue"
+                           FontSize="15"
+                           FontFamily="PhiloBI"/>
+                    <Label Text="Or: 0"
+                           x:Name="StatutOr"
+                           VerticalOptions="Start" 
+                           HorizontalOptions="Start"
+                           FontAttributes="Bold"
+                           TextColor="PowderBlue"
+                           FontSize="15"
+                           FontFamily="PhiloBI"/>
+                </StackLayout>
+                <StackLayout Grid.Column="1" Grid.Row="0" Margin="5"> <!-- Fiche du joueur coté droit -->
+                    <Label Text="Intelligence: 0"
+                           x:Name="StatutIntelligence"
+                           VerticalOptions="Start" 
+                           HorizontalOptions="Start"
+                           FontAttributes="Bold"
+                           TextColor="PowderBlue"
+                           FontSize="15"
+                           FontFamily="PhiloBI"/>
+                    <Label Text="Vivacité: 0"
+                           x:Name="StatutVivacité"
+                           VerticalOptions="Start" 
+                           HorizontalOptions="Start"
+                           FontAttributes="Bold"
+                           TextColor="PowderBlue"
+                           FontSize="15"
+                           FontFamily="PhiloBI"/>
+                    <Label Text="Niveau : 0"
+                           x:Name="StatutNiveau"
+                           VerticalOptions="Start" 
+                           HorizontalOptions="Start"
+                           FontAttributes="Bold"
+                           TextColor="PowderBlue"
+                           FontSize="15"
+                           FontFamily="PhiloBI"/>
+                    <Label Text="Potions: 0 / 0"
+                           x:Name="StatutPotions"
+                           VerticalOptions="Start" 
+                           HorizontalOptions="Start"
+                           FontAttributes="Bold"
+                           TextColor="PowderBlue"
+                           FontSize="15"
+                           FontFamily="PhiloBI"/>
+                </StackLayout>
+                <!-- Animation Prodige -->
+                <Grid
+            x:Name="pokemonTransitionAnimation"
+            Grid.Row="0"
+            Grid.RowSpan="2"
+            BackgroundColor="#460302"
+            IsVisible="False"
+            TranslationX="-500">
+                    <Line
+                x:Name="line1"
+                X1="0"
+                Y1="10"
+                X2="188"
+                Y2="10"
+                Stroke="#B24D4D" />
+                    <Line
+                x:Name="line2"
+                X1="0"
+                Y1="30"
+                X2="233"
+                Y2="30"
+                Stroke="#B55151" />
+                    <Line
+                x:Name="line3"
+                X1="0"
+                Y1="55"
+                X2="247"
+                Y2="55"
+                Stroke="#FE8181" />
+                    <Line
+                x:Name="line4"
+                X1="0"
+                Y1="56"
+                X2="247"
+                Y2="56"
+                Stroke="#FE8181" />
+                    <Line
+                x:Name="line5"
+                X1="0"
+                Y1="57"
+                X2="247"
+                Y2="57"
+                Stroke="#FE8181" />
+                    <Line
+                x:Name="line6"
+                X1="0"
+                Y1="68"
+                X2="188"
+                Y2="68"
+                Stroke="#B24D4D" />
+                    <Line
+                x:Name="line7"
+                X1="0"
+                Y1="119"
+                X2="233"
+                Y2="119"
+                Stroke="#B55151" />
+                    <Line
+                x:Name="line8"
+                X1="0"
+                Y1="142"
+                X2="263"
+                Y2="142"
+                Stroke="#B24D4D" />
+                    <Line
+                x:Name="line9"
+                X1="0"
+                Y1="178"
+                X2="153"
+                Y2="178"
+                Stroke="#B55151" />
+                    <Line
+                x:Name="line10"
+                X1="0"
+                Y1="203"
+                X2="268"
+                Y2="203"
+                Stroke="#B55151" />
+                    <Line
+                x:Name="line11"
+                X1="0"
+                Y1="266"
+                X2="107"
+                Y2="266"
+                Stroke="#FE8181" />
+                    <Line
+                x:Name="line12"
+                X1="0"
+                Y1="267"
+                X2="107"
+                Y2="267"
+                Stroke="#FE8181" />
+                    <Line
+                x:Name="line13"
+                X1="0"
+                Y1="268"
+                X2="107"
+                Y2="268"
+                Stroke="#FE8181" />
+                    <Line
+                x:Name="line14"
+                X1="0"
+                Y1="312"
+                X2="153"
+                Y2="312"
+                Stroke="#B55151" />
+                    <Line
+                x:Name="line15"
+                X1="0"
+                Y1="339"
+                X2="233"
+                Y2="339"
+                Stroke="#B24D4D" />
+                    <Line
+                x:Name="line16"
+                X1="0"
+                Y1="359"
+                X2="183"
+                Y2="359"
+                Stroke="#B24D4D" />
+                    <Line
+                x:Name="line17"
+                X1="0"
+                Y1="382"
+                X2="313"
+                Y2="382"
+                Stroke="#B55151" />
+                    <Line
+                x:Name="line18"
+                X1="0"
+                Y1="432"
+                X2="219"
+                Y2="432"
+                Stroke="#FE8181" />
+                    <Line
+                x:Name="line19"
+                X1="0"
+                Y1="433"
+                X2="219"
+                Y2="433"
+                Stroke="#FE8181" />
+                    <Line
+                x:Name="line20"
+                X1="0"
+                Y1="434"
+                X2="219"
+                Y2="434"
+                Stroke="#FE8181" />
+                    <Line
+                x:Name="line21"
+                X1="0"
+                Y1="464"
+                X2="183"
+                Y2="464"
+                Stroke="#B24D4D" />
+                    <Line
+                x:Name="line22"
+                X1="0"
+                Y1="492"
+                X2="243"
+                Y2="492"
+                Stroke="#B55151" />
+                    <Line
+                x:Name="line23"
+                X1="0"
+                Y1="534"
+                X2="153"
+                Y2="534"
+                Stroke="#B24D4D" />
+                    <Line
+                x:Name="line24"
+                X1="0"
+                Y1="557"
+                X2="253"
+                Y2="557"
+                Stroke="#B24D4D" />
+                    <Line
+                x:Name="line25"
+                X1="0"
+                Y1="600"
+                X2="219"
+                Y2="600"
+                Stroke="#FE8181" />
+                    <Line
+                x:Name="line26"
+                X1="0"
+                Y1="601"
+                X2="219"
+                Y2="601"
+                Stroke="#FE8181" />
+                    <Line
+                x:Name="line27"
+                X1="0"
+                Y1="602"
+                X2="219"
+                Y2="602"
+                Stroke="#FE8181" />
+                    <Line
+                x:Name="line28"
+                X1="0"
+                Y1="620"
+                X2="153"
+                Y2="620"
+                Stroke="#B55151" />
+                    <Line
+                x:Name="line29"
+                X1="0"
+                Y1="643"
+                X2="253"
+                Y2="643"
+                Stroke="Green" />
+                    <Image
+                x:Name="charizard"
+                Margin="30, 0"
+                Source="De02.png" 
+                Aspect="AspectFit" 
+                IsVisible="False" 
+                TranslationX="-500" />
+                </Grid>
+
+
+
+                <StackLayout Grid.Row="1" Grid.ColumnSpan="2" x:Name="BlocHistoire" IsVisible="false" Padding="10"> <!-- Bloc Histoire -->
+                    <Label Text=""
+                           x:Name="Histoire"
+                           VerticalOptions="CenterAndExpand" 
+                           HorizontalOptions="CenterAndExpand"
+                           HorizontalTextAlignment="Center"
+                           FontAttributes="Bold"
+                           TextColor="AntiqueWhite"
+                           FontSize="Medium"
+                           FontFamily="PhiloBI"/>
+                </StackLayout>
+                <StackLayout Grid.Row="1" Grid.ColumnSpan="2" x:Name="BlocTitreChoixAvatar" IsVisible="true"> <!-- Bloc Titre Choix Avatar -->
+                    <Label Text="Choississez votre avatar"
+                           x:Name="TitreChoixPerso"
+                           VerticalOptions="CenterAndExpand" 
+                           HorizontalOptions="CenterAndExpand"
+                           FontAttributes="Bold"
+                           TextColor="AntiqueWhite"
+                           FontSize="Medium"
+                           FontFamily="PhiloBI"/>
+                </StackLayout>
+                <StackLayout Grid.Column="0" Grid.Row="2" x:Name="BlocChoixAvatar" Padding="15" VerticalOptions="Fill"> <!-- Bloc Choix Avatar -->
+                    <RadioButton x:Name="Avatar01"
+                                 Value="Justicier"
+                                 Content="Justicier"
+                                 TextColor="AntiqueWhite"
+                                 FontSize="Medium"
+                                 FontFamily="PhiloR"
+                                 Padding="5"
+                                 CheckedChanged="ChoisirJusticier"/>
+                    <RadioButton x:Name="Avatar02"
+                                 Value="Pretre"
+                                 Content="Prêtre"
+                                 TextColor="AntiqueWhite"
+                                 FontSize="Medium"
+                                 FontFamily="PhiloR"
+                                 Padding="5"
+                                 CheckedChanged="ChoisirPretre"/>
+                    <RadioButton x:Name="Avatar03"
+                                 Value="Archer"
+                                 Content="Archer"
+                                 TextColor="AntiqueWhite"
+                                 FontSize="Medium"
+                                 FontFamily="PhiloR"
+                                 Padding="5"
+                                 CheckedChanged="ChoisirArcher"/>
+                    <Label Text="Vous avez choisi"
+                           x:Name="ChoixAvatar"
+                           TextColor="AntiqueWhite"
+                           FontSize="Medium"
+                           FontFamily="PhiloR"
+                           Padding="10"/>
+                </StackLayout>
+                <StackLayout Grid.Column="1" Grid.Row="2" x:Name="BlocExplicationAvatar"> <!-- Bloc Explication Avatar -->
+                    <Label Text=""
+                           x:Name="ExplicationAvatar"
+                           VerticalOptions="StartAndExpand"
+                           TextColor="AntiqueWhite"
+                           FontSize="Medium"
+                           FontFamily="PhiloR"
+                           Margin="0,10"/>
+                </StackLayout>
+                    <Label Grid.ColumnSpan="2" Grid.Row="4" IsVisible="false"
+                           TextColor="AntiqueWhite"
+                           FontSize="Medium"
+                           FontFamily="PhiloR"
+                           Padding="5"
+                           VerticalOptions="End"
+                           x:Name="ResultatDe"/>
+                <StackLayout Grid.ColumnSpan="2" Grid.Row="3" x:Name="DebuterAventure" VerticalOptions="End"> <!-- Bloc Débuter Aventure -->
+                    <Button Text="Commencer l'aventure"
+                            BackgroundColor="Transparent"
+                            TextColor="PowderBlue"
+                            Clicked="DebuterAventureClicked"/>
+                </StackLayout>
+                <StackLayout Grid.Column="0" Grid.Row="4" VerticalOptions="EndAndExpand">
+                </StackLayout>
+                <StackLayout Grid.Column="1" Grid.Row="4" VerticalOptions="EndAndExpand">
+                </StackLayout>
+                <Button Text="Faire un prodige !"
+                            FontFamily="PhiloR" TextColor="PowderBlue"
+                            BackgroundColor="Transparent"
+                            Clicked="ActionButtonProdigeClicked"
+                            Grid.ColumnSpan="2" Grid.Row="3" x:Name="ActionButtonProdige" IsVisible="false"/>
+                <!-- ******** Action 01 ******** 01-->
+                <Button Text="Fouiller la maison"
+                            FontFamily="PhiloR" TextColor="PowderBlue"
+                            BackgroundColor="Transparent"
+                            Clicked="ActionButton01AClicked"
+                            Grid.Column="0" Grid.Row="3" x:Name="ActionButton01A" IsVisible="false"/>
+                <Button Text="Aller au village"
+                            FontFamily="PhiloR" TextColor="PowderBlue"
+                            Clicked="ActionButton01BClicked"
+                            BackgroundColor="Transparent"
+                            Grid.Column="1" Grid.Row="3" x:Name="ActionButton01B" IsVisible="false"/>
+                <!-- ******** Action 02 ******** 02-->
+                <Button Text="Suivre les traces"
+                            FontFamily="PhiloR" TextColor="PowderBlue"
+                            BackgroundColor="Transparent"
+                            Clicked="ActionButton02AClicked"
+                            Grid.Column="0" Grid.Row="3" x:Name="ActionButton02A" IsVisible="false"/>
+                <Button Text="Enterrer le serviteur"
+                            FontFamily="PhiloR" TextColor="PowderBlue"
+                            Clicked="ActionButton02BClicked"
+                            BackgroundColor="Transparent"
+                            Grid.Column="1" Grid.Row="3" x:Name="ActionButton02B" IsVisible="false"/>
+                <Button Text="Combattre"
+                            FontFamily="PhiloR" TextColor="PowderBlue"
+                            BackgroundColor="Transparent"
+                            Clicked="ActionButton02CClicked"
+                            Grid.Column="0" Grid.Row="3" x:Name="ActionButton02C" IsVisible="false"/>
+                <Button Text="Partir sans rien dire"
+                            FontFamily="PhiloR" TextColor="PowderBlue"
+                            Clicked="ActionButton02DClicked"
+                            BackgroundColor="Transparent"
+                            Grid.Column="1" Grid.Row="3" x:Name="ActionButton02D" IsVisible="false"/>
+                <!-- ******** Action 03 ******** 03-->
+                <Button Text="Amadouer le jaguar"
+                            FontFamily="PhiloR" TextColor="PowderBlue"
+                            BackgroundColor="Transparent"
+                            Clicked="Actionbutton03AClicked"
+                            Grid.Column="0" Grid.Row="3" x:Name="ActionButton03A" IsVisible="false"/>
+                <Button Text="Attaquer le jaguar"
+                            FontFamily="PhiloR" TextColor="PowderBlue"
+                            Clicked="ActionButton03BClicked"
+                            BackgroundColor="Transparent"
+                            Grid.Column="1" Grid.Row="3" x:Name="ActionButton03B" IsVisible="false"/>
+                <Button Text="Retourner à la maison"
+                            FontFamily="PhiloR" TextColor="PowderBlue"
+                            BackgroundColor="Transparent"
+                            Clicked="ActionButton03CClicked"
+                            Grid.Column="0" Grid.Row="3" x:Name="ActionButton03C" IsVisible="false"/>
+                <Button Text="Acheter du matériel"
+                            FontFamily="PhiloR" TextColor="PowderBlue"
+                            Clicked="Actionbutton03DClicked"
+                            BackgroundColor="Transparent"
+                            Grid.Column="1" Grid.Row="3" x:Name="ActionButton03D" IsVisible="false"/>
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

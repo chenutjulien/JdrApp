@@ -1,0 +1,66 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Fonts\Baloo2-ExtraBold.ttf" />
+    <None Remove="Fonts\ConcertOne-Regular.ttf" />
+    <None Remove="Fonts\Itim-Regular.ttf" />
+    <None Remove="Fonts\KleeOne-Regular.ttf" />
+    <None Remove="Fonts\KleeOne-SemiBold.ttf" />
+    <None Remove="Fonts\MPLUSRounded1c-ExtraBold.ttf" />
+    <None Remove="Fonts\PatuaOne-Regular.ttf" />
+    <None Remove="Fonts\Philosopher-Bold.ttf" />
+    <None Remove="Fonts\Philosopher-BoldItalic.ttf" />
+    <None Remove="Fonts\Philosopher-Italic.ttf" />
+    <None Remove="Fonts\Philosopher-Regular.ttf" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Fonts\Baloo2-ExtraBold.ttf" />
+    <EmbeddedResource Include="Fonts\ConcertOne-Regular.ttf" />
+    <EmbeddedResource Include="Fonts\Itim-Regular.ttf" />
+    <EmbeddedResource Include="Fonts\KleeOne-Regular.ttf" />
+    <EmbeddedResource Include="Fonts\KleeOne-SemiBold.ttf" />
+    <EmbeddedResource Include="Fonts\MPLUSRounded1c-ExtraBold.ttf" />
+    <EmbeddedResource Include="Fonts\PatuaOne-Regular.ttf" />
+    <EmbeddedResource Include="Fonts\Philosopher-Bold.ttf" />
+    <EmbeddedResource Include="Fonts\Philosopher-BoldItalic.ttf" />
+    <EmbeddedResource Include="Fonts\Philosopher-Italic.ttf" />
+    <EmbeddedResource Include="Fonts\Philosopher-Regular.ttf" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Graph" Version="3.35.0" />
+    <PackageReference Include="SendGrid" Version="9.25.0" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2012" />  
+    <PackageReference Include="Xamarin.Essentials" Version="1.6.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Views\AventureAccueil.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Donjon01.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Donjon02.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\DonjonAccueil.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\JeuxAccueil.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Jungle01.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\JungleAccueil.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>
